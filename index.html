@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy BIrthday</title>
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2; /* Ensure the overlay is above the video */
+            mix-blend-mode: multiply; /* Apply the ink splatter as a mask */
+        }
+
+        .main-video {
+            width: 100%;
+            height: auto;
+            position: relative; /* Set position to relative */
+            z-index: 1; /* Ensure the main video is behind the overlay */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video class="video-overlay" src="./assets/ink-splatter.mp4" autoplay muted loop></video>
+        <video class="main-video" src="./assets/video1.mp4" autoplay muted loop></video>
+    </div>
+</body>
+</html>
